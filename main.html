@@ -1,0 +1,35 @@
+<html>
+<title>Super Mario Bros. Data Visualization</title>
+
+<head>
+
+    <style type="text/css">
+    
+      canvas { position: absolute; }
+      #UI { z-index: 3; }
+      #game { z-index: 2; }
+      #background { z-index: 1; }
+      #flagView { z-index: 2; left: 900; }
+      #extendedGame { z-index: 2; top: 600; }
+      #extendedGameUI { z-index: 3; top: 600; }
+    
+    </style>
+    
+</head>    
+    
+    
+<body>
+<canvas id="game" style="border: 1px solid" width="800" height="500"></canvas>
+<canvas id="UI" style="border: 1px solid" width="800" height="500"></canvas>
+<canvas id="flagView" style="border: 1px solid" width="600" height="500"></canvas>
+<canvas id="background" style="border: 1px solid" width="800" height="500"></canvas>
+<canvas id="extendedGame" style="border: 1px solid" width="1600" height="250"></canvas>
+<canvas id="extendedGameUI" style="border: 1px solid" width="1600" height="250"></canvas>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="gameData.js"></script>
+<script type="text/javascript" src="game.js"></script>
+</body>
+
+
+
+</html>

@@ -1,34 +1,17 @@
 <html>
-<title>Super Mario Bros. Data Visualization</title>
+<title>Video Game Genre Popularity Visualization</title>
 
 <head>
-
-    <style type="text/css">
-    
-      canvas { position: absolute; }
-      #UI { z-index: 3; }
-      #game { z-index: 2; }
-      #background { z-index: 1; }
-      #flagView { z-index: 2; left: 900; }
-      #extendedGame { z-index: 2; top: 600; }
-      #extendedGameUI { z-index: 3; top: 600; }
-    
-    </style>
-    
+  <h1>Video Game Genre Popularity Visualization</h1>
 </head>    
     
     
 <body>
-<div>This visualization shows sales (in millions) of video game genres per year from 1986 - 2016. Data from VGChartz.<br><br>Use arrow keys to move Mario around.</div>
-<canvas id="game" style="border: 1px solid" width="800" height="500"></canvas>
-<canvas id="UI" style="border: 1px solid" width="800" height="500"></canvas>
-<canvas id="flagView" style="border: 1px solid" width="600" height="500"></canvas>
-<canvas id="background" style="border: 1px solid" width="800" height="500"></canvas>
-<canvas id="extendedGame" style="border: 1px solid" width="1600" height="250"></canvas>
-<canvas id="extendedGameUI" style="border: 1px solid" width="1600" height="250"></canvas>
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="gameData.js"></script>
-<script type="text/javascript" src="game.js"></script>
+<p>This visualization aims to illustrate the trends in video game genre popularity over time. I discovered a data set on Kaggle by a user named Gregory Smith who designed a web scraper that collected video game sales data from VGChartz (Video Game Charts). The dataset contains all VGCharts’ sales data for games that sold more than 100,000 copies globally. So thank you to Gregory Smith and VGChartz.</p>
+<p>The visualization has three views: The main view, the extended view, and the flag view. The main view was designed to look like <i>Super Mario Bros.</i> is running right in your browser. It gives the user a view that is similar to the player’s view in the original game. This view also includes a legend with all of the genres, as well as x and y axes (years and units sold in millions respectively). Groups of bars can be seen on screen textured as bricks (in various colors), with a label underneath them indicating the year this data is representing. <b>The user can see more by controlling Mario using the keyboard arrow keys (up arrow to jump)</b>, or by utilizing the draggable component from the extended view.</p>
+<p>The extended view shows the data for every year in a single view. This data mirrors the data viewable from the main view, however it allows for an overall look at the data. The extended view also highlights the current location of the main view. <b>This highlighted box can be clicked and dragged to whatever position (year) the user specifies</b>.</p>
+<p>The flag view looks at the percentage of sales for a genre over a span of years. Depending on where Mario is in the main view (what years are currently visible in the main view), the flag view will calculate the total number of games sold for that year span and will display which percentage of those sales came from the different genres. This view updates as Mario progresses through the level and is animated so it is easier to visually identify the changes from one-year span to another.</p>
+<h2><a href="main.html">Click here for the visualization</a></h2>
 </body>
 
 

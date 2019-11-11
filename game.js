@@ -3,7 +3,7 @@
   CIS 568
   Mario Vis Code
 
-  Sources that I used to help with the development of the game:
+  Sources that I used to help with the development:
     https://developer.mozilla.org/en-US/docs/Games/Anatomy
     https://www.w3schools.com/graphics/tryit.asp?filename=trygame_controllers_keys_multiple
   
@@ -1030,6 +1030,7 @@ function drawAxis(canv, context, yScale, offset) {
     context.font = '14px serif';
     var increment = ((getMax(TEST,"sales"))/11)*(i/(unit * yScale));
     context.fillText(increment.toFixed(2), offset + (20 * yScale)-5, axisLineWidth - i-5);
+    context.fillText("Units sold (millions)",5,35);
     }
   }
 }
